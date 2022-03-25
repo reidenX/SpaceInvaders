@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  font-family: "Tourney", cursive;
+  font-weight: 900;
+}
+
+h1 {
+  position: absolute;
+  color: aliceblue;
+}
+
+.title {
+  top: 50px;
+  text-align: center;
+  line-height: 0.8;
+  font-size: 2rem;
+  width: 100%;
+  font-weight: 300;
+  color: violet;
+  animation: flash 2s forwards linear infinite;
+}
+
+@keyframes flash {
+  0% {
+    color: purple;
+  }
+  50% {
+    color: violet;
+  }
+  100% {
+    color: purple;
+  }
+}
+
+.gameOver {
+  font-size: 1rem;
+}
+
+.score {
+  top: 10px;
+  left: 10px;
+  font-size: 0.8rem;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.space {
+  position: relative;
+  width: 255.85px;
+  height: 255px;
+  background-image: url("./img/galaxy.png");
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.space div {
+  width: 17px;
+  height: 17px;
+}
+
+@media (min-width: 600px) {
+  .space {
+    width: 602px;
+    height: 608px;
+  }
+
+  .space div {
+    width: 40px;
+    height: 40px;
+  }
+
+  .score {
+    font-size: 1rem;
+  }
+
+  .gameOver {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .title {
+    font-size: 3rem;
+    width: 30%;
+  }
+}
+
+.aliens {
+  background-image: url("./img/nave.png");
+  background-size: contain;
+}
+
+.player {
+  background-image: url("./img/ship.png");
+  background-size: contain;
+}
+
+.bullet {
+  background: yellow;
+  border-radius: 50%;
+}
