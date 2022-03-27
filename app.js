@@ -2,10 +2,12 @@ const space = document.querySelector(".space");
 let playerControls = document.addEventListener("keydown", movePlayer);
 let gameOverMessage = document.querySelector(".gameOver");
 let playerPosition = 202;
-let alienIndex;
-let shooting;
-let alienSpeed = 2000;
 
+let shooting;
+let rateOfFire = 50;
+
+let alienIndex;
+let alienSpeed = 2000;
 let killedAliens = [];
 let aliens = [
   0, 1, 3, 4, 5, 8, 9, 11, 12, 14, 18, 19, 20, 22, 24, 25, 26, 32, 33, 36, 39,
@@ -116,7 +118,7 @@ function shoot() {
   bulletId = setInterval(moveBullet, 100);
 }
 
-shooting = setInterval(shoot, 500);
+shooting = setInterval(shoot, rateOfFire);
 //UPDATE-------------------------------
 const gameUpdate = setInterval(gameOver, 500);
 
